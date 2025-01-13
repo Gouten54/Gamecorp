@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site officiel de Gamecorp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #2c2f33;
+            color: #ffffff;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #23272a;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .logo-discord {
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-discord:hover {
+            transform: scale(1.1);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #5865f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #4752c4;
+        }
+
+        .description {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #5865f2;
+            border-radius: 5px;
+            background-color: #23272a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Site officiel de Gamecorp</h1>
+    </header>
+    <div class="container">
+        <!-- Logo Discord -->
+        <img src="https://banner2.cleanpng.com/20240209/hgk/transparent-discord-icon-cartoon-character-with-big-head-holds-1710882656382.webp" 
+             alt="Logo Discord" class="logo-discord" onclick="showLink()">
+
+        <!-- Bouton en savoir plus -->
+        <button class="btn" onclick="toggleDescription()">En savoir plus</button>
+
+        <!-- Lien Discord -->
+        <p id="link" style="display: none; margin-top: 20px;">
+            Voici le lien de Gamecorp : 
+            <a href="https://discord.gg/fNFfAPYWeK" target="_blank" style="color: #5865f2;">Rejoins-nous ici !</a>
+        </p>
+
+        <!-- Description -->
+        <div class="description" id="description">
+            <p>Rejoins notre serveur Discord et plonge dans une expérience de gaming inoubliable ! 🎮💥</p>
+            <p>Ici, tout est réuni pour te divertir : un serveur multi-gaming où tu peux jouer à tes jeux préférés avec une communauté accueillante et conviviale. 🤝 Que tu sois un passionné de FPS, un stratège de jeux de rôle ou un amateur de jeux de société en ligne, tu trouveras toujours un endroit où t'éclater !</p>
+            <p>Nos bots de jeux interactifs ajoutent une touche de fun supplémentaire, te permettant de t'amuser même quand tu n'es pas en train de jouer à un jeu vidéo classique. 🎲✨</p>
+            <p>Et surtout, l’ambiance ici est super chill. Des membres sympas, prêts à discuter, à aider, et à partager de bons moments ensemble. 😎🍻</p>
+            <p>Alors, viens passer un bon moment avec nous, que tu sois là pour jouer, discuter ou juste te détendre. On t'attend ! 👾🎉</p>
+        </div>
+    </div>
+
+    <script>
+        function showLink() {
+            document.getElementById('link').style.display = 'block';
+        }
+
+        function toggleDescription() {
+            const desc = document.getElementById('description');
+            desc.style.display = desc.style.display === 'none' || desc.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
